@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Cmt-ov-nAc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Nwo-pO-1iZ">
+            <objects>
+                <navigationController id="Cmt-ov-nAc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ixl-Gy-CO6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="b87-s2-eDb" kind="relationship" relationship="rootViewController" id="7Kk-26-qDY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e30-Jf-VJq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7" y="252"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ef1-jz-cBK">
+            <objects>
+                <viewController id="b87-s2-eDb" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tpe-QT-apj"/>
+                        <viewControllerLayoutGuide type="bottom" id="aLL-2G-MyA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eIk-Uz-mIf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1f9-P1-ayo">
+                                <rect key="frame" x="150" y="283" width="75" height="102"/>
+                                <state key="normal" title="打开选择器">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="gotoSelectorPage:" destination="b87-s2-eDb" eventType="touchUpInside" id="CdR-lY-vkY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUs-nP-u0W">
+                                <rect key="frame" x="0.0" y="119" width="375" height="106"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="1f9-P1-ayo" secondAttribute="centerY" id="sa5-yc-oXi"/>
+                            <constraint firstAttribute="centerX" secondItem="1f9-P1-ayo" secondAttribute="centerX" id="yXX-bo-aUt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lDs-yk-wmz"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="XUs-nP-u0W" id="5Ga-fw-5Xk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9oh-oz-W8D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804.5" y="68.5"/>
+        </scene>
+    </scenes>
+</document>
